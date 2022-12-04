@@ -4,6 +4,7 @@
 
 # TODO: Importez vos modules ici
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 # TODO: Définissez vos fonctions ici (il en manque quelques unes)
@@ -24,7 +25,18 @@ def find_closest_index(values: np.ndarray, number: float) -> int:
         else:
             index= (i+1)
     return index
+def fonction(x):
+    x = np.linspace(-1,1, 250)
+    y = (((x**2)*np.sin(1/x**2))+x)
+    plt.plot(x,y)
+    plt.xlim(-1,1)
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.title("y en fonction de x selon la formule de l'exercice 4")
+    plt.show()
 
+def estimatinpi ():
+    pass
 
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
